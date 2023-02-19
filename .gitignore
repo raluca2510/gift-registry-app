@@ -1,2 +1,6 @@
 struct.txt
 /venv
+views.py
+urls.py
+utils.py
+serializers.py
