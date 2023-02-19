@@ -22,7 +22,7 @@ def getRoutes(request):
             'Endpoint': '/items/',
             'method': 'POST',
             'body': {'body': ""},
-            'description': 'Creates new note with data sent in post request'
+            'description': 'Creates new item with data sent in post request'
         },
         {
             'Endpoint': '/items/id',
@@ -41,6 +41,36 @@ def getRoutes(request):
             'method': 'DELETE',
             'body': None,
             'description': 'Deletes and exiting item'
+        },
+        {
+            'Endpoint': '/groups/',
+            'method': 'GET',
+            'body': None,
+            'description': 'Returns an array of groups'
+        },
+        {
+            'Endpoint': '/groups/',
+            'method': 'POST',
+            'body': {'body': ""},
+            'description': 'Creates new group with data sent in post request'
+        },
+        {
+            'Endpoint': '/groups/id',
+            'method': 'GET',
+            'body': None,
+            'description': 'Returns a single group object'
+        },
+        {
+            'Endpoint': '/groups/id',
+            'method': 'PUT',
+            'body': {'body': ""},
+            'description': 'Creates an existing group with data sent in post request'
+        },
+        {
+            'Endpoint': '/groups/id',
+            'method': 'DELETE',
+            'body': None,
+            'description': 'Deletes and exiting group'
         },
     ]
     return Response(routes)

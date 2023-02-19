@@ -6,6 +6,8 @@ import string
 from .models import *
 from .serializers import *
 
+
+####################### ITEMS ENDPOINTS ######################
 # /items/ GET
 def getItemsList(request):
     items = Item.objects.all()
