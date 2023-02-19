@@ -68,6 +68,28 @@ def fetchItem(request, pk):
     if request.method == 'DELETE':
         return deleteItem(request, pk)
 
+# Fetch groups
+@api_view(['GET', 'POST'])
+def fetchGroups(request):
+
+    if request.method == 'GET':
+        return getGroupsList(request)
+    
+    if request.method == 'POST':
+        return createGroup(request)
+
+# Fetch group
+@api_view(['GET', 'PUT', 'DELETE'])
+def fetchGroup(request, pk):
+
+    if request.method == 'GET':
+        return getGroup(request, pk)
+
+    if request.method == 'PUT':
+        return updateGroup(request, pk)
+
+    if request.method == 'DELETE':
+        return deleteGroup(request, pk)
 
 # def index(request):
 #     return render(request, 'api/index.html', {
