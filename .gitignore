@@ -1,2 +1,6 @@
 struct.txt
 /venv
+README.md
+utils.py
+api/views.py
+views.py
