@@ -11,5 +11,9 @@ urlpatterns = [
     # Groups
     path('groups/', views.fetchGroups, name="groups"),
     path('groups/<str:pk>/', views.fetchGroup, name="groups"),
+    
+    # Users
+    path('users/', views.fetchUsers, name="users"),
+    path('users/<str:pk>/', views.fetchUser, name="users"),
 
 ]
