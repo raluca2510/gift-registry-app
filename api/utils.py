@@ -2,6 +2,7 @@ from rest_framework.response import Response
 from rest_framework import status
 import random
 import string
+from django.contrib.auth.hashers import make_password
 
 from .models import *
 from .serializers import *
@@ -28,11 +29,13 @@ def createUser(request):
     if data['username'] in usernames:
         return Response('Username already exists.', status=status.HTTP_400_BAD_REQUEST)
     
+    # Hash password
+    password = make_password(data['password'])
     
     # Create new item with data
     user = User.objects.create(
         username = data['username'],
-        password = data['password']
+        password = password
     )
     
     serializer = UserSerializer(user, many=False)
