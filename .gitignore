@@ -1,3 +1,4 @@
 struct.txt
 /venv
 README.md
+db.sqlite3
