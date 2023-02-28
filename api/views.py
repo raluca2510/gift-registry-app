@@ -119,6 +119,7 @@ def fetchItems(request):
     
 # Fetch item
 @api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
 def fetchItem(request, pk):
 
     if request.method == 'GET':
@@ -143,6 +144,7 @@ def fetchGroups(request):
 
 # Fetch group
 @api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
 def fetchGroup(request, pk):
 
     if request.method == 'GET':
@@ -157,7 +159,7 @@ def fetchGroup(request, pk):
     
 # Fetch users
 @api_view(['GET', 'POST'])
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 def fetchUsers(request):
 
     if request.method == 'GET':
@@ -168,6 +170,7 @@ def fetchUsers(request):
 
 # Fetch user
 @api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
 def fetchUser(request, pk):
 
     if request.method == 'GET':

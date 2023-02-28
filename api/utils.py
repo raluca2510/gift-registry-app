@@ -87,8 +87,9 @@ def deleteUser(request, pk):
 ####################### ITEMS ENDPOINTS ######################
 # /items/ GET
 def getItemsList(request):
-    user = request.user
-    items = user.user_items.all()
+    # user = request.user
+    # items = user.user_items.all()
+    items = Item.objects.all()
     serializer = ItemSerializer(items, many=True)
     
     return Response(serializer.data, status=status.HTTP_200_OK)
@@ -104,7 +105,7 @@ def createItem(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     # Get user who made the request
-    user = User.objects.get(id=data['user'])
+    user = User.objects.get(id=request.user.id)
     
     # Get group
     group = Group.objects.get(id=data['group'])
@@ -169,9 +170,8 @@ def deleteItem(request, pk):
 ####################### GROUPS ENDPOINTS ######################
 # /groups/ GET
 def getGroupsList(request):
-    # Get all groups that request.user is part of
-    user = request.user
-    groups = user.user_groups.all()
+    # Get all groups
+    groups = Group.objects.all()
     
     serializer = GroupSerializer(groups, many=True)
     
