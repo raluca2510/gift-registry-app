@@ -23,11 +23,11 @@ def createUser(request):
     data = request.data
     
     # Get all usernames
-    usernames = User.objects.all()
+    usernames = User.objects.values_list('username', flat=True)
     
     # Check if username valid
     if data['username'] in usernames:
-        return Response('Username already exists.', status=status.HTTP_400_BAD_REQUEST)
+        return Response({'detail': 'Username already exists.'}, status=status.HTTP_400_BAD_REQUEST)
     
     # Hash password
     password = make_password(data['password'])
@@ -58,12 +58,9 @@ def getUser(request, pk):
 def updateUser(request, pk):
     data = request.data
     
-    # Get requested user
-    user = User.objects.get(id=pk)
-    
-    # Update user and convert to JSON
+    user = request.user
+        
     serializer = UserSerializer(instance=user, data=data, partial=True)
-
     # Ensure that the updated User is valid
     if serializer.is_valid():
         serializer.save()
@@ -185,25 +182,30 @@ def createGroup(request):
     
     # If there's no title, return
     if not data['title']:
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'detail': 'Title is required.'}, status=status.HTTP_400_BAD_REQUEST)
     
+    # Check if title already exists
+    group_titles = Group.objects.values_list('title', flat=True)
+    
+    for group_title in group_titles:
+        if data['title'].lower() == group_title.lower():
+            return Response({'detail': 'Group name already exists.'}, status=status.HTTP_400_BAD_REQUEST)
+        
     # Get user who made the request
-    admin = User.objects.get(id=data['admin'])
+    admin = request.user
     
     # Generate random key of 6 digits
     source = string.digits
     key = ''.join((random.choice(source) for i in range(6)))
-    
-    # Add admin to users as default
-    users = [admin]
-
-    
+ 
     # Create new group with data
     group = Group.objects.create(
+        title = data['title'],
         admin = admin,
-        key = key,
-        users = users
+        key = key
     )
+    
+    group.users.set([admin])
     
     # Get JSON
     serializer = GroupSerializer(group, many=False)

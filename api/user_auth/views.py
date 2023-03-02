@@ -13,6 +13,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         # Add custom claims
         # Encrypt username into token
         token['username'] = user.username
+        token['id'] = user.id
         # ...
 
         return token

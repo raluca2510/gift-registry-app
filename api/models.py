@@ -9,7 +9,7 @@ class User(AbstractUser):
     
 class Group(models.Model):
     # User input field
-    title = models.CharField(max_length=60, blank=False, null=False) #required
+    title = models.CharField(max_length=60, blank=False, null=False, unique=True) #required
     
     # Generated at creation fields
     created_at = models.DateTimeField(auto_now_add=True)

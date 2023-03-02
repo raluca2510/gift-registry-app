@@ -159,7 +159,7 @@ def fetchGroup(request, pk):
     
 # Fetch users
 @api_view(['GET', 'POST'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def fetchUsers(request):
 
     if request.method == 'GET':
