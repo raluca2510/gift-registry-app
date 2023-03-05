@@ -84,8 +84,6 @@ def deleteUser(request, pk):
 ####################### ITEMS ENDPOINTS ######################
 # /items/ GET
 def getItemsList(request):
-    # user = request.user
-    # items = user.user_items.all()
     items = Item.objects.all()
     serializer = ItemSerializer(items, many=True)
     
