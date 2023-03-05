@@ -77,18 +77,6 @@ The app is mobile responsive.
     - urls.py - imports TokenRefreshView from DRF Simple JWT and uses it as view for the two routes. 'token/' creates a token for the user, while 'token/refresh/' updates the token; they are both prefixedf by 'user_auth/'. The access token lifetime is 5 minutes, while the refresh token lifetime is 90 days.
     - views.py - has to classes inheriting from SimpleJWT. 'MyTokenObtainPairSerializer' returns the actual token into which I also added the user's username and id so they can be utilized by client. 'MyTokenObtainPairView' serializes the token. 'getRoutes' works similarly to 'getRoutes' from 'api/views.py' file.
 
-> gift_registry - this is the project's folder. I want to point out the urls.py and setting.py files.
-- setting.py
-    - in 'INSTALLED_APPS' I added not only the actual app, but also the DRF and SimpleJWT requirements.
-    - 'REST_FRAMEWORK' - default classes for user auth
-    - 'SIMPLE_JWT' - needed for Simple JWT. This is where the tokens' lifetimes are specified.
-    - 'MIDDLEWARE' - added CorsMiddleware for in-browser requests from client to backend
-    - 'AUTH_USER_MODEL' - is based on the User model
-    - 'CORS_ALLOW_ALL_ORIGINS' - allowed origins to make HTTP requests
-- urls.py - has the project's urls. The admin route, the main api and the user_auth route.
-
-> requirements.txt - has all the intalled packages
-
 ## FRONTEND - frontend/src
 >  components
     - form_input
