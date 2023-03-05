@@ -15,8 +15,7 @@ The app is mobile responsive.
 <img src="https://user-images.githubusercontent.com/89038416/222965431-02e8130d-1071-4519-ad26-72b264a9e173.png" width="300">
 
 # What’s contained in each file
-## BACKEND/API
-> api - main directory for backend
+## BACKEND - api/
 - admin.py - used to display the app's models in the Django admin panel
 - apps.py - holds the app config
 - models.py - has three models:
