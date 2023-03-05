@@ -1,0 +1,51 @@
+.SideBar {
+    height: 100vh;
+    width: 21rem;
+    background-color: #fff;
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+}
+
+.logo {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.logo svg {
+    font-size: 3rem;
+    margin-right: 0;
+}
+
+.collapsed-menu {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .SideBar {
+        width: 100vw;
+        height: min-content;
+        max-height: 100vh;
+        flex-direction: column;
+        top: 0;
+        font-size: 1.3rem;
+        z-index: 1;
+    }
+    .collapsed-menu {
+        display: block;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .logo svg {
+        transform: translateY(-5%);
+    }
+}

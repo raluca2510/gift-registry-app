@@ -1,0 +1,69 @@
+.Group {
+    width: 24rem;
+    height: 10rem;
+    background-color: white;
+    padding: 1.5rem;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--main-accent-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.group-label {
+    color: var(--secondary-text-color);
+}
+
+.group-title {
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.Group:hover {
+    cursor: pointer;
+    background-color: var(--main-accent-color);
+    color: var(--white-color);
+}
+
+.group-key {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--main-accent-color);
+    border-radius: var(--border-radius);
+}
+
+.group-key input {
+    margin: 0;
+}
+
+.group-key input[type='text']:focus {
+    outline-color: vaR(--secondary-accent-color);
+}
+
+@media (max-width: 576px) {
+    .Group {
+        width: 100%;
+        min-height: 10rem;
+        height: auto;
+    }
+
+    .group-title {
+        white-space: normal;
+    }
+}

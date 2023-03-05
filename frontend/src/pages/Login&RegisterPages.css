@@ -1,0 +1,49 @@
+.LoginPage,
+.RegisterPage {
+    width: 95%;
+    height: 95%;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);    
+}
+
+.login-title {
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--main-accent-color)
+}
+
+.login-subtitle {
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    width: 25rem;
+
+    position: relative;
+}
+
+@media (max-width: 576px) {
+    .login-form {
+        width: 100%;
+        align-items: center;
+    }
+
+    .login-form input {
+        width: 100%;
+    }
+
+    .login-title {
+        font-size: 3rem;
+    }
+}

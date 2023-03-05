@@ -1,0 +1,7 @@
+.wishlist-item {
+    list-style: none;
+    padding: 1.5rem;
+    background-color: var(--neutral-color);
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+}

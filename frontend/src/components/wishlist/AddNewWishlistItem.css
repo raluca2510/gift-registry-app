@@ -1,0 +1,39 @@
+.AddNewWishlistItem {
+    background-color: var(--white-color);
+    border-radius: vaR(--border-radius);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    font-weight: 700;
+}
+
+.create-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.create-button .message {
+    color: var(--white-color);
+    text-align: center;
+    align-self: center;
+    width:max-content;
+    padding: 0.4rem 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 0;
+}
+
+.message.ok {
+    background-color: var(--main-accent-color);
+}
+
+.message.error {
+    background-color: var(--tertiary-accent-color);
+}

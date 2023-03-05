@@ -1,0 +1,24 @@
+.SideBarCTA {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin: 2rem 2rem 0;
+    background-color: var(--main-accent-color);
+    border-radius: var(--border-radius);
+    color: var(--neutral-color);
+    height: 100%;
+    box-shadow: var(--box-shadow);
+}
+
+.sidebarcta-title {
+    font-weight: bold;
+}
+
+.sidebarcta-group {
+    margin-top: 1rem;
+}
+
+.sidebarcta-list {
+    margin-left: 1rem;
+    margin-bottom: 0.7rem;
+}

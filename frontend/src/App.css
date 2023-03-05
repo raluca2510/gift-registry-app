@@ -1,0 +1,13 @@
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding-left: 21rem;
+}
+
+@media (max-width: 992px) {
+    .App {
+        padding-top: 7rem;
+        padding-left: 0;
+    }
+}

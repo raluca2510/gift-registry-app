@@ -1,0 +1,28 @@
+.members-list-item {
+    list-style: none;
+    padding: 1.5rem;
+    background-color: var(--neutral-color);
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.members-list-item p {
+    font-weight: 500;
+}
+
+.members-list-item .member-remove-btn{
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 576px) {
+    .members-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+} 

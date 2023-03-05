@@ -1,0 +1,12 @@
+.CreateGroupPageContent {
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    gap: 2rem;
+}

@@ -1,0 +1,42 @@
+.GroupsCTA {
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.groupscta-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.groupscta-subtitle {
+    max-width: 35rem;
+}
+
+.groupscta-buttons {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.groupscta-buttons a {
+    text-decoration: none;
+    background-color: var(--main-accent-color);
+    color: var(--white-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.groupscta-buttons a:hover {
+    background-color: var(--tertiary-accent-color);
+}

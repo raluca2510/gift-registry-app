@@ -1,0 +1,25 @@
+.Footer {
+    width: 21rem;
+    height: 5rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+
+
+svg {
+    margin-right: 0.3rem;
+    transform: translateY(20%);
+
+    font-size: 1.3rem;
+}
+
+.Footer p {
+    text-decoration-line: none;
+    color: var(--text-color);
+}
+
+.Footer p:hover {
+    cursor: pointer;
+    color: #008F95;
+}

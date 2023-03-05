@@ -1,0 +1,7 @@
+export { default as AuthPage } from './AuthPage'
+export { default as CreateGroupPage } from './CreateGroupPage'
+export { default as GroupPage } from './GroupPage'
+export { default as HomePage } from './HomePage'
+export { default as JoinGroupPage } from './JoinGroupPage'
+export { default as LoginPage } from './LoginPage'
+export { default as RegisterPage } from './RegisterPage'

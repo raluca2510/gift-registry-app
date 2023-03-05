@@ -1,0 +1,30 @@
+.Wishlist {
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.wishlist-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.wishlist-title span {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    background-color: var(--secondary-text-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius);
+}
+
+.wishlist-title span:hover {
+    cursor: pointer;
+}
+
+.wishlist-title svg {
+    margin-right: 1rem;
+    transform: translate(35%, 45%);
+}

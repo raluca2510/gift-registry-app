@@ -1,0 +1,51 @@
+.SideBarContent {
+    height: 100%;
+    margin-top: 2rem;
+    overflow-y: auto;
+}
+
+a {
+    padding-top: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.nav a:first-of-type {
+    padding-top: 0;
+}
+
+.nav a:hover {
+    color: #008F95;
+}
+
+.sidebar-groups {
+    padding: 2rem 2rem 0;
+}
+
+.sidebar-group {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-group-title {
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-group-list {
+    padding-left: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.sidebar-group-list:hover {
+    color: var(--main-accent-color);
+}

@@ -1,0 +1,37 @@
+.JoinGroupPageContent {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.JoinGroupPageContent input {
+    width: 40%;
+    background-color: var(--white-color);
+    font-size: 1rem;
+    outline: 2px solid var(--main-accent-color);
+}
+
+.JoinGroupPageContent input:active,
+.JoinGroupPageContent input:focus {
+    outline: solid var(--main-accent-color);
+}
+
+.joingroup-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.joingroup-content .Group {
+    outline: 2px solid var(--main-accent-color);
+}
