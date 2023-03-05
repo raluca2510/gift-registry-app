@@ -11,6 +11,8 @@ The Django backend utilizes the [Django REST Framework](https://www.django-rest-
 In addition, I chose to build the frontend using React because I wanted to continue my journey of learning this framework and finally tackling a full stack Django+React project. The frontend utilizes multiple pages and components and communicates with the backend via API. Not only did I enjoy using the JS and React skills learned through CS50W, but, more importantly, I also approached new concepts and improved my React knowledge: state and context hooks, user auth with web tokens, fetching data, styling components.
 
 The app is mobile responsive.
+![desktop-image](https://user-images.githubusercontent.com/89038416/222965270-a7c756fa-c130-4f7a-8c1e-c24e0f061f84.png)
+<img src="https://user-images.githubusercontent.com/89038416/222965431-02e8130d-1071-4519-ad26-72b264a9e173.png" width="300">
 
 # What’s contained in each file
 ## BACKEND/API
