@@ -1,4 +1,6 @@
 # Giftus
+This is my final project for CS50W - HarvardX' course on web programming with Python and JavaScript.
+
 # Distinctiveness and Complexity
 **Giftus** is a gift registry app where users can create and view wishlists. Users **cannot** communicate or interact with one another.
 
