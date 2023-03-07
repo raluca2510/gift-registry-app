@@ -19,7 +19,6 @@ The app is mobile responsive.
         - FormInput.jsx - has an input component that receives multiple props and can be customized accordingly. It's used across the app
         - FormInput.css - CSS styles for the FormInput component
 
-
     - general
         - GeneralHeader.jsx - has a div that functions as a Header. The component is used in different pages and it displays different messages associated with each page based on the state of the props
         - GeneralHeader.css - CSS styles for the GeneralHeader component and the GroupPageHeader component (group/GroupPageHeader.jsx)
