@@ -14,11 +14,10 @@ The app is mobile responsive.
 
 # What’s contained in each file
 ## FRONTEND - frontend/src
->  components
+-  components
     - form_input
         - FormInput.jsx - has an input component that receives multiple props and can be customized accordingly. It's used across the app
         - FormInput.css - CSS styles for the FormInput component
-
 
     - general
         - GeneralHeader.jsx - has a div that functions as a Header. The component is used in different pages and it displays different messages associated with each page based on the state of the props
@@ -76,7 +75,7 @@ The app is mobile responsive.
     
     - index.js - a JS file with component exports
 
-> context - all the app's contexts
+- context - all the app's contexts
     - AuthContext.jsx
         - login(e) - it's used for user authentication. When user tries to login, the app makes a request to '/user_auth/token/' to check username and password validity; it then saves the tokens and user data to state and local storage.
         - logout() - logs the user out by reseting the state and the local storage
@@ -104,7 +103,7 @@ The app is mobile responsive.
         - contextData - the variables and functions in WishlistItemContext that can be used by all pages and components in the app.
     - index.js - a JS file with context exports
 
-> pages
+- pages
     - AuthPage.jsx - main page for user auth. By default it shows LoginPage but user can navigate to RegisterPage too.
     - AuthPage.css - CSS styles for the AuthPage page
     - CreateGroupPage.jsx - main page for creating a new group. It shows a GeneralHeader and the CreateGroupPageContent component. Styled through GeneralPage.css.
@@ -117,14 +116,14 @@ The app is mobile responsive.
     - Login&RegisterPages.css - CSS styles for LoginPage and RegisterPage
     - index.js - a JS file with pages exports
 
-> utils
+- utils
      - PrivateRoute.js - when user is not logged in, they can only navigate to AuthPage
      - index.js - a JS file with the PrivateRoute export
 
-> App.js - has all the app's routes inside of the providers
-> App.css - CSS styles for App.js
-> index.js - main JS file
-> index.css - CSS styles for index
+- App.js - has all the app's routes inside of the providers
+- App.css - CSS styles for App.js
+- index.js - main JS file
+- index.css - CSS styles for index
 
 # How to run the application
 ## Client
